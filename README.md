@@ -5,10 +5,11 @@
 
 ```bash
 python -m venv .env
-source .env/bin/activate
+source .env/bin/activate # or .env/Scripts/activate on win
+pip install -r requirements.txt 
 pytest --grammarly-ext utils/grammarly.14.1006.0.crx # for run with grammarly installed
 # or
-pytest # for run without grammarly installed
+pytest -k no_installed # for run without grammarly installed
 ```
 
 

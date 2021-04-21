@@ -1,4 +1,4 @@
-@installed
+@not_installed
 Feature: Check if grammarly is installed
 Scenario: with a chrome browser with grammarly installed
 		Given a url like google.com
