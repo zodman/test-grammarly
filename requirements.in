@@ -1,0 +1,4 @@
+pytest
+pytest-splinter
+splinter
+pytest-bdd

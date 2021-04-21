@@ -1,0 +1,7 @@
+.env
+tests.test_*
+__pycache__/
+*.json
+*.html
+*.log
+report*
