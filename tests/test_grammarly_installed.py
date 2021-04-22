@@ -9,7 +9,7 @@ from pytest_bdd import (
 
 
 @scenario('features/grammarly_installed.feature',
-          'with a chrome browser with grammarly installed')
+          'open a chrome browser with grammarly installed')
 def test_grammarly_installed():
     pass
 
@@ -19,7 +19,7 @@ def visit_website(browser):
     browser.visit("https://google.com")
 
 
-@when('wait for the webpage is fully loaded')
+@when('the browser wait for the webpage is fully loaded')
 def check_website_loaded(browser):
     # force to open only google.com
     browser.windows[0].is_current = True
@@ -27,7 +27,7 @@ def check_website_loaded(browser):
     assert browser.is_element_present_by_name("q", wait_time=5)
 
 
-@then('check if the body property contains data-gr-ext-installed property')
+@then('check if the body properties contains data-gr-ext-installed')
 def check_installed_on_body(browser, request):
     """
         Check if grammarly is installed or not.
