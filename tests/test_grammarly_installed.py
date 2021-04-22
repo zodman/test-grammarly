@@ -36,7 +36,8 @@ def check_installed_on_body(browser, request):
     assert browser.is_element_present_by_tag("body")
     body_tag = browser.find_by_tag("body").first
     if request.config.getoption("--grammarly-ext"):
-        assert body_tag["data-gr-ext-installed"] == "", "grammarly Ext not installed"
+        assert_msg = "grammarly Ext not installed"
+        assert body_tag["data-gr-ext-installed"] == "", assert_msg
     else:
         print(">>>>>>> grammarly not installed")
         assert body_tag["data-gr-ext-installed"] is None

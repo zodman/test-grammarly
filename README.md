@@ -1,5 +1,11 @@
 ### Testing grammarly with selenium
 
+[![Run
+it](https://github.com/zodman/test-grammarly/actions/workflows/run.yml/badge.svg)](https://github.com/zodman/test-grammarly/actions/workflows/run.yml)
+Html report on the action....
+** Note: Only can check if the extension is installed because
+[this](https://github.com/zodman/test-grammarly#problems-founded)
+
 
 # For run
 
@@ -22,7 +28,7 @@ on windows:
     f"/mnt/c/Users/{user}/AppData/Local/Google/Chrome/User Data/{profile_name}/Extensions/{extension_id}"
     
 on my machine:
-/mnt/c/Users/QA/AppData/Local/Google/Chrome/User Data/Profile 1/Extensions/kbfnbcaeplbcioakkpcpgfkobkghlhen
+`/mnt/c/Users/QA/AppData/Local/Google/Chrome/User Data/Profile 1/Extensions/kbfnbcaeplbcioakkpcpgfkobkghlhen`
 
 Then i had to inspect the definition extension of the grammarly `manifest.json`
 

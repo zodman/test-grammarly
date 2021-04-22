@@ -2,9 +2,6 @@
 """Grammarly not working like expect feature tests."""
 
 from pytest_bdd import given, scenario, then, when
-import pytest
-from selenium.common.exceptions import NoSuchElementException
-import time
 from .base import activate, type_on_grammarly, grammarly_check
 
 
