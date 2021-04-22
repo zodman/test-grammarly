@@ -24,14 +24,14 @@ def check_website_loaded(browser):
     # force to open only google.com
     browser.windows[0].is_current = True
     browser.windows.current.close_others()
-    assert browser.is_element_present_by_name("q",wait_time=5)
+    assert browser.is_element_present_by_name("q", wait_time=5)
 
 
 @then('check if the body property contains data-gr-ext-installed property')
 def check_installed_on_body(browser, request):
     """
         Check if grammarly is installed or not.
-        
+
     """
     assert browser.is_element_present_by_tag("body")
     body_tag = browser.find_by_tag("body").first
@@ -40,6 +40,3 @@ def check_installed_on_body(browser, request):
     else:
         print(">>>>>>> grammarly not installed")
         assert body_tag["data-gr-ext-installed"] is None
-
-
-

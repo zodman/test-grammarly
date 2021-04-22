@@ -12,12 +12,3 @@ def wait_time(wait_time, run):
         if run():
             return True
     return False
-
-
-def activate(browser):
-    browser.visit("https://demo.grammarly.com/?hideSignupPopup")
-    wait_time(5, lambda *args: len(browser.windows) > 1)
-    browser.windows[0].is_current = True
-    browser.windows.current.close_others()
-    browser.visit("https://www.grammarly.com/grammar-check")
-

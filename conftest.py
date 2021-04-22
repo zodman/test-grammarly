@@ -2,6 +2,7 @@ import pytest
 import os
 from selenium import webdriver
 
+
 def pytest_addoption(parser):
     parser.addoption("--run-local", action="store_true", help="run on local")
     parser.addoption("--grammarly-ext", help="grammarly extension located")
