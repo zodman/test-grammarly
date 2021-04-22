@@ -38,6 +38,8 @@ def check_installed_on_body(browser, request):
     if request.config.getoption("--grammarly-ext"):
         assert_msg = "grammarly Ext not installed"
         assert body_tag["data-gr-ext-installed"] == "", assert_msg
+        assert body_tag["data-new-gr-c-s-check-loaded"] == '14.1006.0', assert_msg
     else:
         print(">>>>>>> grammarly not installed")
-        assert body_tag["data-gr-ext-installed"] is None
+        assert body_tag["data-gr-ext-installed"] == None
+        assert body_tag["data-new-gr-c-s-check-loaded"] == None
