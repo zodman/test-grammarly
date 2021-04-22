@@ -19,7 +19,7 @@ pytest --grammarly-ext utils/grammarly.14.1006.0.crx # for run with grammarly in
 pytest -k no_installed # for run without grammarly installed
 ```
 
-## [Test Plan](https://github.com/zodman/test-grammarly/search?l=gherkin)
+# [Test Plan](https://github.com/zodman/test-grammarly/search?l=gherkin)
 
 
 ### How detect if grammarly chrome extension is installed ?
@@ -42,7 +42,7 @@ With `js-beautify` unminificate the code and inspect the functions and found:
 
 When the plugin is loaded there are some `data-` properties  attached to the `<body>` tag.
 
-*PUM! Grammarly detected ...*
+*[PUM! Grammarly detected ...](https://github.com/zodman/test-grammarly/blob/main/tests/test_grammarly_installed.py#L40)*
 
 ### Problems founded
 
