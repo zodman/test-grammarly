@@ -2,8 +2,8 @@ import time
 
 
 def get_shadow(browser, element):
-    return browser.execute_script("return arguments[0].shadowRoot",
-                                  element._element)
+    args = "return arguments[0].shadowRoot", element._element
+    return browser.execute_script(*args)
 
 
 def wait_time(wait_time, run):

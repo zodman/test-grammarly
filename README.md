@@ -41,6 +41,6 @@ PUM! Grammarly detected ...
 
 ### Problems founded
 
-* When you run on docker-selenium, the application upload the file crx, then 
-  selenium can handle and raise a java heap memory exception.. I don't fix it
-  because are out scope of this.
+* When you run on docker-selenium webdriver=remote, the application upload the file crx, then 
+  selenium cann't handle it and raise a java heap memory exception.. I don't fix it
+  because are out scope of project.
