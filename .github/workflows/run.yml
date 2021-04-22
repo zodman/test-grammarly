@@ -26,7 +26,7 @@ jobs:
       - run: | 
           pytest --splinter-remote-url=http://localhost:4444/wd/hub  --splinter-webdriver=remote  -k not_installed
       - uses: actions/upload-artifact@v2
-        if: failure()
+        if: always()
         with:
           name: reports
           path: |
