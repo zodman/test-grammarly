@@ -2,9 +2,10 @@
 
 [![Run
 it](https://github.com/zodman/test-grammarly/actions/workflows/run.yml/badge.svg)](https://github.com/zodman/test-grammarly/actions/workflows/run.yml)
-Html report on the action....
-** Note: Only can check if the extension is installed because
-[this](https://github.com/zodman/test-grammarly#problems-founded)
+
+Html report like artifact on the [github actions](https://github.com/zodman/test-grammarly/actions/workflows/run.yml)....
+
+** Note: Only behind docker selenium/standalone-chrome can check if extension is installed because of [Problems founded](https://github.com/zodman/test-grammarly#problems-founded)
 
 
 # For run
@@ -27,14 +28,11 @@ on windows:
 
     f"/mnt/c/Users/{user}/AppData/Local/Google/Chrome/User Data/{profile_name}/Extensions/{extension_id}"
     
-on my machine:
-`/mnt/c/Users/QA/AppData/Local/Google/Chrome/User Data/Profile 1/Extensions/kbfnbcaeplbcioakkpcpgfkobkghlhen`
-
 Then i had to inspect the definition extension of the grammarly `manifest.json`
 
-And search all files load when the extension are loaded. To inspect that js..
+Find files loaded at start. Then inspect that js..
 
-I discover `src/js/Grammarly-check.js` that's mean ok if check maybe there is the definition of loaded or installed
+I discover `src/js/Grammarly-check.js` that's mean: _"OK if check maybe there is the definition of loaded or installed"_
 
 With `js-beautify` unminificate the code and inspect the functions and found:
 
@@ -42,11 +40,10 @@ With `js-beautify` unminificate the code and inspect the functions and found:
 
 When the plugin is loaded there are some `data-` properties  attached to the `<body>` tag.
 
-
-PUM! Grammarly detected ...
+*PUM! Grammarly detected ...*
 
 ### Problems founded
 
 * When you run on docker-selenium webdriver=remote, the application upload the file crx, then 
   selenium cann't handle it and raise a java heap memory exception.. I don't fix it
-  because are out scope of project.
+  because are out scope of the project.
