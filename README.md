@@ -49,3 +49,10 @@ When the plugin is loaded there are some `data-` properties  attached to the `<b
 * When you run on docker-selenium webdriver=remote, the application upload the file crx, then 
   selenium cann't handle it and raise a java heap memory exception.. I don't fix it
   because are out scope of the project.
+
+### Notes:
+
+* Install chrome extension with selenium
+    https://github.com/zodman/test-grammarly/blob/main/conftest.py#L17
+* get html nodes from Shadow DOM
+  https://github.com/zodman/test-grammarly/blob/main/tests/utils.py#L4
